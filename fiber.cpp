@@ -10,6 +10,9 @@
 
 #define FIBER_STACK_SIZE_DEFAULT (128 * 1024)
 
+namespace coroutine_x 
+{
+
 static std::atomic<uint64_t> s_fiber_id(0);
 static std::atomic<uint64_t> s_fiber_count(0);
 
@@ -136,4 +139,6 @@ void Fiber::reset(std::function<void()> cb) {
     
     makecontext(&m_ctx, &Fiber::MainFunc, 0);
     m_state = READY;
+}
+
 }

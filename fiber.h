@@ -4,6 +4,9 @@
 #include <functional> // Include the necessary header file
 #include <ucontext.h>
 
+namespace coroutine_x
+{
+
 /**
  * @brief 协程类定义和函数声明
 */
@@ -118,4 +121,6 @@ private:
     std::function<void()> m_cb;
     bool m_runInScheduler;
 };
+
+}
 #endif

@@ -9,10 +9,13 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 
+namespace coroutine_x 
+{
 /// 获取当前线程ID
 pid_t GetThreadId();
 
 /// 获取当前协程ID
 uint32_t GetFiberId();
+}
 
 #endif
